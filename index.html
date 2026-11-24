@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A resident-friendly guide to Danville public meetings, agendas, and local decisions.">
+  <title>Danville Civic Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Danville Civic Digest home">
+      <span class="brand-mark">D</span>
+      <span>Danville <b>Civic Digest</b></span>
+    </a>
+    <a class="official-link" href="https://www.danville.ca.gov/AgendaCenter" target="_blank" rel="noreferrer">Official agendas ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LOCAL GOVERNMENT, MADE CLEARER</p>
+      <h1>Know what’s happening<br><em>in your town.</em></h1>
+      <p class="hero-copy">A simple guide to Danville public meetings and the documents behind local decisions.</p>
+      <div class="hero-meta"><span class="live-dot"></span> Connected to the Town of Danville’s public agenda feed</div>
+    </section>
+
+    <section class="content">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE LATEST</p>
+          <h2>Meetings & agendas</h2>
+        </div>
+        <button id="refresh" class="refresh-button" type="button">↻ Refresh</button>
+      </div>
+      <div id="status" class="status" role="status">Loading official meeting updates…</div>
+      <div id="meetings" class="meeting-list" aria-live="polite"></div>
+      <p class="source-note">Meeting information is drawn from the Town of Danville’s public RSS feed. Always open the official agenda to confirm dates, times, and details.</p>
+    </section>
+
+    <section class="about">
+      <div>
+        <p class="eyebrow">WHY THIS EXISTS</p>
+        <h2>Public information<br>should be understandable.</h2>
+      </div>
+      <p>Danville Civic Digest is an independent student civic-tech project. It helps residents find public meeting materials in one place. It is not affiliated with or endorsed by the Town of Danville.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Danville Civic Digest</span>
+    <a href="https://www.danville.ca.gov/AgendaCenter" target="_blank" rel="noreferrer">Town of Danville Agenda Center ↗</a>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

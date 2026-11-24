@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+:root { --ink:#202b35; --muted:#66737c; --line:#e5e8e5; --paper:#fbfaf7; --green:#557365; --pale:#edf2ed; --gold:#c99b54; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",Arial,sans-serif; }
+a { color:inherit; }
+.topbar { height:76px; padding:0 max(6vw,24px); display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); background:#fff; }
+.brand { display:flex; gap:12px; align-items:center; text-decoration:none; font-size:15px; letter-spacing:.01em; }
+.brand b { font-weight:700; }
+.brand-mark { display:grid; place-items:center; width:34px; height:34px; background:var(--green); color:#fff; border-radius:10px 10px 10px 2px; font-family:"Playfair Display",serif; font-size:21px; }
+.official-link, footer a { color:var(--green); font-size:13px; font-weight:700; text-decoration:none; }
+.hero { padding:100px 24px 82px; text-align:center; background:linear-gradient(180deg,#f3f4ed 0%,var(--paper) 100%); }
+.eyebrow { margin:0 0 16px; color:var(--green); font-size:10px; font-weight:700; letter-spacing:.19em; }
+h1,h2 { font-family:"Playfair Display",Georgia,serif; font-weight:600; }
+h1 { margin:0; font-size:clamp(42px,7vw,76px); line-height:1.06; letter-spacing:-.035em; }
+h1 em { color:var(--green); font-weight:600; }
+.hero-copy { max-width:530px; margin:22px auto 20px; color:var(--muted); font-size:16px; line-height:1.7; }
+.hero-meta { display:inline-flex; align-items:center; gap:9px; color:#627169; font-size:12px; }
+.live-dot { width:8px; height:8px; background:#6d9a77; border-radius:50%; box-shadow:0 0 0 4px #e1ebe1; }
+.content { max-width:900px; margin:0 auto; padding:64px 24px 76px; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom:24px; }
+.section-heading .eyebrow { margin-bottom:8px; }
+h2 { margin:0; font-size:clamp(29px,4vw,40px); letter-spacing:-.025em; }
+.refresh-button { border:1px solid #d9e0da; border-radius:999px; background:#fff; padding:10px 16px; color:var(--green); font:600 12px "DM Sans",sans-serif; cursor:pointer; }
+.refresh-button:hover { background:var(--pale); }
+.status { color:var(--muted); font-size:13px; padding:16px 0; }
+.meeting-list { display:grid; gap:12px; }
+.meeting-card { display:grid; grid-template-columns:94px 1fr auto; gap:20px; align-items:center; padding:22px; border:1px solid var(--line); border-radius:14px; background:#fff; transition:transform .15s,border-color .15s; }
+.meeting-card:hover { transform:translateY(-2px); border-color:#c5d2c8; }
+.date-box { text-align:center; padding:10px 5px; border-radius:10px; background:var(--pale); color:var(--green); }
+.date-box .month { display:block; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.date-box .day { display:block; font-family:"Playfair Display",serif; font-size:28px; line-height:1.25; }
+.meeting-title { margin:0 0 7px; font-size:16px; line-height:1.4; }
+.meeting-date { color:var(--muted); font-size:12px; }
+.meeting-link { color:var(--green); font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+.meeting-link:hover { text-decoration:underline; }
+.empty { padding:32px; border:1px dashed #cfd8d0; border-radius:14px; color:var(--muted); text-align:center; background:#fff; font-size:14px; }
+.source-note { margin:20px 0 0; color:#7b8582; font-size:11px; line-height:1.6; }
+.about { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; padding:54px max(8vw,24px); background:#eef1eb; }
+.about p:last-child { max-width:430px; color:#58665f; font-size:14px; line-height:1.8; }
+footer { display:flex; justify-content:space-between; gap:20px; padding:25px max(6vw,24px); color:#7a8580; background:#fff; font-size:11px; }
+@media (max-width:620px) {
+  .topbar { height:66px; }
+  .brand { font-size:13px; }
+  .hero { padding:76px 22px 62px; }
+  .meeting-card { grid-template-columns:64px 1fr; gap:14px; padding:15px; }
+  .meeting-link { grid-column:2; }
+  .date-box .day { font-size:24px; }
+  .about { grid-template-columns:1fr; gap:15px; }
+  footer { flex-direction:column; }
+}
